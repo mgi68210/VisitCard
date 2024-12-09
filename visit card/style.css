@@ -1,0 +1,171 @@
+/* Style de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Wrapper principal */
+.wrapper {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 500px;
+    text-align: center;
+}
+
+/* Conteneur général */
+.profile-top {
+    height: 200px;
+    background-image: url("./fleurs.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden; /* Empêche tout débordement de l'image */
+    position: relative; /* Nécessaire pour gérer les niveaux avec z-index */
+}
+
+/* Effet au survol (zoom interne, sans impact sur l'extérieur) */
+.profile-top:hover {
+    background-size: 110%; /* Simule un zoom en agrandissant l'image de fond */
+    transition: background-size 0.3s ease; /* Transition fluide */
+}
+
+/* Avatar */
+.profile-image {
+    background-image: url("./profile.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin: -60px auto 10px auto;
+    position: relative; /* Assure un positionnement indépendant */
+    z-index: 1; /* Place l'avatar au-dessus de la couverture */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre subtile */
+}
+
+/* Nom */
+.name {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Âge */
+.age {
+    color: gray;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Email */
+.email a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.email a:hover {
+    text-decoration: underline;
+    color: #6e1852;
+}
+
+/* Ville : lien de base */
+.ville a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-flex; /* Permet d'aligner l'icône et le texte correctement */
+    align-items: center; /* Centre verticalement l'icône et le texte */
+    gap: 5px; /* Espace entre l'icône et le texte */
+}
+
+/* Icône IonIcon dans les liens */
+.ville a ion-icon {
+    font-size: 20px; /* Taille de base de l'icône */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition fluide pour le zoom et la couleur */
+}
+
+/* Effet au survol : icône uniquement */
+.ville a:hover ion-icon {
+    color: #6e1852; /* Change la couleur de l'icône */
+    transform: scale(1.3); /* Agrandit l'icône de 30% */
+}
+
+/* Section titre */
+.section-title {
+    font-size: 20px;
+    margin: 20px 0 10px;
+    color: #6e1852;
+    font-weight: 500;
+}
+
+.reasons {
+    margin: 20px 0;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.reasons li {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Liste des motivations */
+.reasons {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Conteneur principal */
+.online-profiles {
+    display: flex;
+    flex-direction: column; /* Organise les lignes verticalement */
+    align-items: center;    /* Centre horizontalement tout le contenu */
+    gap: 20px;              /* Espace entre les lignes */
+}
+
+/* Ligne de profils */
+.profile-row {
+    display: flex;           /* Flexbox pour organiser les icônes */
+    justify-content: center; /* Centre horizontalement les icônes */
+    align-items: center;     /* Centre verticalement les icônes (utile si différentes tailles) */
+    gap: 20px;               /* Espace entre les icônes */
+}
+
+/* Icônes dans les liens */
+.online-profiles a img {
+    width: 25px; /* Taille des icônes */
+    height: 25px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation fluide au survol */
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+/* Effet au survol */
+.online-profiles a img:hover {
+    transform: scale(1.2); /* Agrandit l'icône au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre subtile */
+}
+
+/* Liens */
+.online-profiles a {
+    display: flex; /* Flexbox dans chaque lien pour centrer l'image */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement */
+}
